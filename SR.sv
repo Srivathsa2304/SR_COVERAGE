@@ -513,10 +513,10 @@ endclass
     
 // ----------------------Coverage----------------------------------
     
-    class subscriber extends uvm_subscriber#(sr_sequence_item);
+    class sr_coverage extends uvm_subscriber#(sr_sequence_item);
 
-  `uvm_component_utils(subscriber)
-  uvm_analysis_imp#(sr_sequence_item, subscriber) item_got_export1;
+  `uvm_component_utils(sr_coverage)
+  uvm_analysis_imp#(sr_sequence_item, sr_coverage) item_got_export1;
 
   sr_sequence_item tr;
 
@@ -540,7 +540,7 @@ endgroup
 
  
 
-function new(string name="subscriber",uvm_component parent);
+function new(string name="sr_coverage",uvm_component parent);
 
   super.new(name,parent);
 
